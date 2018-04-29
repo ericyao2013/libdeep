@@ -1,12 +1,10 @@
 # libdeep: C/C++ library for deep learning
 
-<img src="https://github.com/bashrc/libdeep/blob/master/img/logo.png?raw=true" width=200/>
-
 This is a C library which can be used in deep learning applications.  What differentiates libdeep from the numerous other deep learning systems out there is that it's small and that trained networks can be exported as *completely standalone C or Python programs* which can either be used via the commandline or within an Arduino IDE for creating robotics or IoT applications.
 
 A Python API for libdeep can be found at https://github.com/bashrc/libdeep-python
 
-<img src="https://github.com/bashrc/libdeep/blob/master/img/training.jpg?raw=true" width=640/>
+<img src="https://github.com/bashrc/libdeep/blob/master/img/libdeep_screenshot.jpg?raw=true" width=800/>
 
 Installation
 ============

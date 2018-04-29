@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 {
     int no_of_outputs = 1;
     int output_field_index[] = { 2 };
-    float error_threshold_percent[] = { 0.1f, 0.1f };
+    float error_threshold_percent[] = { 25.1f, 25.1f };
     unsigned int random_seed = 123;
 
     /* load the data */
@@ -63,11 +63,12 @@ int main(int argc, char* argv[])
     printf("Number of test examples: %d\n",learner.test_data_samples);
     printf("Number of Inputs: %d\n",learner.net->no_of_inputs);
 
-    /* set learning rate */
     deeplearn_set_learning_rate(&learner, 0.2f);
 
+    deeplearn_set_noise(&learner, 0.0f);
+
     /* set percentage of dropouts */
-    deeplearn_set_dropouts(&learner, 0.001f);
+    deeplearn_set_dropouts(&learner, 0.0f);
 
     learner.history.interval = 50000;
 

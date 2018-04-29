@@ -1200,6 +1200,19 @@ void deeplearn_set_learning_rate(deeplearn * learner, float rate)
 }
 
 /**
+ * @brief Sets the noise value
+ * @param learner Deep learner object
+ * @param noise In the range 0.0 to 1.0
+ */
+void deeplearn_set_noise(deeplearn * learner, float noise)
+{
+    learner->net->noise = noise;
+
+    COUNTDOWN(i, learner->net->hidden_layers)
+        learner->autocoder[i]->noise = noise;
+}
+
+/**
  * @brief Sets the percentage of units which drop out during training
  * @param learner Deep learner object
  * @param dropout_percent Percentage of units which drop out in the range 0 to 100

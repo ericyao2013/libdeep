@@ -109,6 +109,7 @@
 
 /* clip between min and max */
 #define CLIP(x, min, max) ( ((x) > max) ? max : ( ((x) < min) ? (min) : (x) ) )
-#define CLIP_WEIGHT(x) (CLIP((x), -2, 2))
+#define MAX_WEIGHT_VALUE 2
+#define CLIP_WEIGHT(x) (CLIP((x), -MAX_WEIGHT_VALUE, MAX_WEIGHT_VALUE))
 
 #endif

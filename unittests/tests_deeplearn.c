@@ -109,7 +109,7 @@ static void test_deeplearn_update()
     assert((&learner)->autocoder!=0);
 
     /* perform pre-training with an autocoder */
-    for (itt = 0; itt < 10000; itt++) {
+    for (itt = 0; itt < 20000; itt++) {
         for (i = 0; i < no_of_inputs; i++) {
             deeplearn_set_input(&learner,i,
                                 NEURON_LOW + (i*NEURON_RANGE/(float)no_of_inputs));

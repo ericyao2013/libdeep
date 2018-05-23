@@ -154,7 +154,7 @@ int deeplearn_history_gnuplot(deeplearn_history * history,
     FILE * fp;
     char data_filename[256];
     char plot_filename[256];
-    char command_str[256];
+    char command_str[1024];
     float value;
     float max_value = 0.01f;
     char * filename = history->filename;
